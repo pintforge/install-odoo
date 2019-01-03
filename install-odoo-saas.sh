@@ -5,33 +5,33 @@
  #### GENERAL SETTINGS : Edit the following settings as needed
 
  # Actions
- export INSTALL_DEPENDENCIES=${INSTALL_DEPENDENCIES:-"no"}
- export INIT_POSTGRESQL=${INIT_POSTGRESQL:-"no"} # yes | no | docker-container
- export INIT_BACKUPS=${INIT_BACKUPS:-"no"} # yes | no | docker-host
- export INIT_NGINX=${INIT_NGINX:-"no"} # yes | no | docker-host
- export INIT_START_SCRIPTS=${INIT_START_SCRIPTS:-"no"} # yes | no | docker-host
+ export INSTALL_DEPENDENCIES=${INSTALL_DEPENDENCIES:-"yes"}
+ export INIT_POSTGRESQL=${INIT_POSTGRESQL:-"yes"} # yes | no | docker-container
+ export INIT_BACKUPS=${INIT_BACKUPS:-"yes"} # yes | no | docker-host
+ export INIT_NGINX=${INIT_NGINX:-"yes"} # yes | no | docker-host
+ export INIT_START_SCRIPTS=${INIT_START_SCRIPTS:-"yes"} # yes | no | docker-host
  export INIT_SAAS_TOOLS=${INIT_SAAS_TOOLS:-"no"} # no | list of parameters to saas.py script
- export INIT_ODOO_CONFIG=${INIT_ODOO_CONFIG:-"no"} # no | yes | docker-container
- export INIT_USER=${INIT_USER:-"no"}
- export INIT_DIRS=${INIT_DIRS:-"no"}
+ export INIT_ODOO_CONFIG=${INIT_ODOO_CONFIG:-"yes"} # no | yes | docker-container
+ export INIT_USER=${INIT_USER:-"yes"}
+ export INIT_DIRS=${INIT_DIRS:-"yes"}
  export ADD_AUTOINSTALL_MODULES=${ADD_AUTOINSTALL_MODULES:-""} # "['module1','module2']"
  export ADD_IGNORED_DATABASES=${ADD_IGNORED_DATABASES:-""} # "['db1','db2']"
- export GIT_PULL=${GIT_PULL:-"no"}
- export UPDATE_ADDONS_PATH=${UPDATE_ADDONS_PATH:-"no"}
- export CLEAN=${CLEAN:-"no"}
+ export GIT_PULL=${GIT_PULL:-"yes"}
+ export UPDATE_ADDONS_PATH=${UPDATE_ADDONS_PATH:-"yes"}
+ export CLEAN=${CLEAN:-"yes"}
 
  ## Dirs
- export ODOO_SOURCE_DIR=${ODOO_SOURCE_DIR:-"/usr/local/src/odoo-source"}
- export ADDONS_DIR=${ADDONS_DIR:-"/usr/local/src/odoo-extra-addons"}
- export ODOO_DATA_DIR=${ODOO_DATA_DIR:-"/opt/odoo/data/"}
- export BACKUPS_DIR=${BACKUPS_DIR:-"/opt/odoo/backups/"}
- export LOGS_DIR=${LOGS_DIR:-"/var/log/odoo/"}
- export OPENERP_SERVER=${OPENERP_SERVER:-/etc/openerp-server.conf}
+ export ODOO_SOURCE_DIR=${ODOO_SOURCE_DIR:-"/usr/local/src/pintforge-source"}
+ export ADDONS_DIR=${ADDONS_DIR:-"/usr/local/src/pintforge-extra-addons"}
+ export ODOO_DATA_DIR=${ODOO_DATA_DIR:-"/opt/pintforge/data/"}
+ export BACKUPS_DIR=${BACKUPS_DIR:-"/opt/pintforge/backups/"}
+ export LOGS_DIR=${LOGS_DIR:-"/var/log/pintforge/"}
+ export OPENERP_SERVER=${OPENERP_SERVER:-/etc/pintforge-server.conf}
 
  ## Cloning
- export CLONE_IT_PROJECTS_LLC=${CLONE_IT_PROJECTS_LLC:-"no"}
- export CLONE_OCA=${CLONE_OCA:-"no"}
- export CLONE_ODOO=${CLONE_ODOO:-"no"}
+ export CLONE_IT_PROJECTS_LLC=${CLONE_IT_PROJECTS_LLC:-"yes"}
+ export CLONE_OCA=${CLONE_OCA:-"yes"}
+ export CLONE_ODOO=${CLONE_ODOO:-"yes"}
 
  ## Docker Names
  export ODOO_DOCKER=${ODOO_DOCKER:-"odoo"}
@@ -47,10 +47,10 @@
  export DB_PASS=${DB_PASS:-`< /dev/urandom tr -dc A-Za-z0-9 | head -c16;echo;`}
 
  ## Odoo
- export ODOO_DOMAIN=${ODOO_DOMAIN:-odoo.example.com}
- export ODOO_DATABASE=${ODOO_DATABASE:-odoo.example.com}
- export ODOO_USER=${ODOO_USER:-odoo}
- export ODOO_BRANCH=${ODOO_BRANCH:-10.0}
+ export ODOO_DOMAIN=${ODOO_DOMAIN:-my.pintforge.com}
+ export ODOO_DATABASE=${ODOO_DATABASE:-my.pintforge.com}
+ export ODOO_USER=${ODOO_USER:-pintforge}
+ export ODOO_BRANCH=${ODOO_BRANCH:-12.0}
  export ODOO_MASTER_PASS=${ODOO_MASTER_PASS:-`< /dev/urandom tr -dc A-Za-z0-9 | head -c16;echo;`}
 
  ## Nginx
